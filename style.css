@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #E8C5E5;
+    background-color: #7776B3;
 }
 
 .header {
@@ -90,6 +90,16 @@ body {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
+.intro-box2 {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #9B86BD;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
 .intro-section h2 {
     font-size: 3rem;
     color: #ffffff;
@@ -112,20 +122,21 @@ body {
     background-color: black;
 }
 
+/* Slide */
 .slide {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: all 0.5s ease;
+    opacity: 0; /* Domyślnie slajdy są niewidoczne */
+    transition: opacity 0.5s ease; /* Zamiast przesuwania, będzie zmiana opacity */
 }
 
 .slide.active {
-    left: 0;
-    opacity: 1;
+    opacity: 1; /* Aktywny slajd będzie widoczny */
 }
+
 
 .slide img {
     width: 100%;
@@ -321,5 +332,88 @@ body {
 
     .game {
         width: 100%;
+    }
+}
+
+/* Games Grid Section */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolumny na większych ekranach */
+    gap: 30px; /* Mniejszy gap między boxami */
+    padding: 20px;
+    justify-items: center;
+    width: 70%; /* Szerokość gridu ograniczona do 70% */
+    margin: 0 auto; /* Wypośrodkuj grid na stronie */
+}
+
+.game-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;  /* Szerokość boxu */
+    height: 400px; /* Wysokość boxu (kwadratowy) */
+}
+
+.game-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-img {
+    width: 85%;  /* Szerokość obrazu względem boxu */
+    height: 70%; /* Wysokość obrazu względem boxu */
+    object-fit: cover; /* Dopasowanie obrazu do wymiarów */
+    border-radius: 5px;
+}
+
+.game-box h1 {
+    font-size: 1.5rem; /* Rozmiar czcionki dla tytułu gry */
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsive: On medium-sized screens, adjust to 2 columns */
+@media (max-width: 1024px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolumny na średnich ekranach */
+        gap: 25px; /* Zmniejszenie gapu dla średnich ekranów */
+    }
+
+    .game-box {
+        width: 250px;  /* Zmniejsz boxy na średnich ekranach */
+        height: 250px; /* Kwadratowy kształt */
+    }
+
+    .game-img {
+        height: 65%; /* Dostosowanie wysokości obrazów */
+    }
+}
+
+/* Responsive: On small screens, adjust to 1 column */
+@media (max-width: 600px) {
+    .games-grid {
+        grid-template-columns: 1fr; /* 1 kolumna na małych ekranach */
+        gap: 20px; /* Mniejszy gap dla małych ekranów */
+    }
+
+    .game-box {
+        width: 220px;  /* Jeszcze mniejsze boxy na małych ekranach */
+        height: 220px; /* Kwadratowy kształt */
+    }
+
+    .game-img {
+        height: 60%; /* Dostosowanie wysokości obrazów */
+    }
+
+    .game-box h1 {
+        font-size: 1.2rem; /* Mniejsza czcionka na małych ekranach */
     }
 }

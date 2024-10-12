@@ -26,7 +26,7 @@
             <img src="logo.png" alt="Team Eclipse Logo" class="logo">
         </a>
         <div class="nav">
-            <a href="#">Games</a>
+            <a href="games.html">Games</a>
             <a href="#">About us</a>
             <a href="#">Contact</a>
         </div>
@@ -46,11 +46,11 @@
         <!-- Logo and introduction box -->
         <div class="gallery-container">
             <div class="slide active">
-                <img src="logo agme.png" alt="Slide 1 Image">
+                <img src="shitty logo.png" alt="Slide 1 Image">
                 <div class="text-container">
                     <h1>Shitty Rocket</h1>
                     <p>Swing through space with most shitiest rocket in world!</p>
-                    <a href="https://mrwaffl3.itch.io/shitty-rocket" class="btn app-store">Itch.io</a>
+                    <a href="https://mrwaffl3.itch.io/shitty-rocket" class="btn app-store">Check Out</a>
                 </div>
             </div>
             <div class="slide">
@@ -58,15 +58,15 @@
                 <div class="text-container">
                     <h1>Nothing</h1>
                     <p>Just nothing. Get all achivment doing nothing.</p>
-                    <a href="https://mrwaffl3.itch.io/nothing" class="btn app-store">Itch.io</a>
+                    <a href="https://mrwaffl3.itch.io/nothing" class="btn app-store">Check Out</a>
                 </div>
             </div>
             <div class="slide">
-                <img src="logo game 2.png" alt="Slide 2 Image">
+                <img src="trex logo.png" alt="Slide 2 Image">
                 <div class="text-container">
                     <h1>T-REX DINO GAME 3D</h1>
                     <p>Play popular google game but in 3d!</p>
-                    <a href="https://mrwaffl3.itch.io/t-rex" class="btn app-store">Itch.io</a>
+                    <a href="https://mrwaffl3.itch.io/t-rex" class="btn app-store">Check Out</a>
                 </div>
             </div>
             <div class="slide">
@@ -74,7 +74,7 @@
                 <div class="text-container">
                     <h1>Flappy Bird 3D</h1>
                     <p>It's flappy bird BUT 3d</p>
-                    <a href="https://mrwaffl3.itch.io/flappy-bird-3d" class="btn app-store">Itch.io</a>
+                    <a href="https://mrwaffl3.itch.io/flappy-bird-3d" class="btn app-store">Check Out</a>
                 </div>
             </div>
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
@@ -82,13 +82,14 @@
         </div>
         <script>
             let currentSlide = 0;
-            const slides = document.querySelectorAll('.slide');
-    
-            function changeSlide(direction) {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + direction + slides.length) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }
+const slides = document.querySelectorAll('.slide');
+
+function changeSlide(direction) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
         </script>
 
 
@@ -99,7 +100,7 @@
             <div class="intro-box">
                 <h2>Welcome to Team Eclipse</h2>
                 <p>At Team Eclipse, we specialize in creating innovative and engaging games that captivate players across platforms. Our team of passionate developers, artists, and designers push the boundaries of storytelling and gameplay to deliver unforgettable experiences. Join us as we shape the future of interactive entertainment.</p> <br>
-                <a class="btn" href="index.html">Check out games!</a>
+                <a class="btn" href="games.html">Check out games!</a>
             </div>
 
         </div>
@@ -151,12 +152,13 @@
                 <a href="https://mrwaffl3.itch.io/nothing">Nothing</a><br>
                 <a href="https://mrwaffl3.itch.io/shitty-rocket">Shitty Rocket</a> <br>
                 <a href="https://mrwaffl3.itch.io/flappy-bird-3d">Flappy Bird 3D</a><br>
+                <a href="https://mrwaffl3.itch.io/prototype-demo">Prototype</a><br>
                 <a href="https://mrwaffl3.itch.io/t-rex">T-Rex 3D</a>
             </div>
             <div class="footer-column">
                 <h3>Sites</h3>
                 <a href="index.html">Home</a><br>
-                <a href="#">Games</a><br>
+                <a href="games.html">Games</a><br>
                 <a href="#">About us</a><br>
                 <a href="#">Contact</a>
             </div>
