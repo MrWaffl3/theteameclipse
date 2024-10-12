@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Team Eclipse</title>
+
+    <meta property="og:title" content="Home">
+    <meta property="og:description" content="Welcome to Team Eclipse!">
+    <meta property="og:type" content="Home">
+    <meta property="og:url" content="https://mrwaffl3.github.io/teameclipse/">
+    <meta property="og:image" content="logo team.png">
+    <meta property="og:site_name" content="Team Eclipse">
+
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  
+    <meta name="description" content="ważne">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section -->
+    <div class="header">
+        <a href="index.html">
+            <img src="logo.png" alt="Team Eclipse Logo" class="logo">
+        </a>
+        <div class="nav">
+            <a href="#">Games</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" class="social-icon"></a>
+            <a href="https://www.youtube.com/@TheTeamEclipsee" target="_blank"><img src="youtube.png" alt="YouTube" class="social-icon"></a>
+            <a href="https://mrwaffl3.itch.io/" target="_blank"><img src="itch-io.1024x1024.png" alt="Itch.io" class="social-icon"></a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Main Content section -->
+    <div class="main">
+        <!-- Logo and introduction box -->
+        <div class="gallery-container">
+            <div class="slide active">
+                <img src="logo agme.png" alt="Slide 1 Image">
+                <div class="text-container">
+                    <h1>Shitty Rocket</h1>
+                    <p>Swing through space with most shitiest rocket in world!</p>
+                    <a href="https://mrwaffl3.itch.io/shitty-rocket" class="btn app-store">Itch.io</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="nothing logo.png" alt="Slide 2 Image">
+                <div class="text-container">
+                    <h1>Nothing</h1>
+                    <p>Just nothing. Get all achivment doing nothing.</p>
+                    <a href="https://mrwaffl3.itch.io/nothing" class="btn app-store">Itch.io</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="logo game 2.png" alt="Slide 2 Image">
+                <div class="text-container">
+                    <h1>T-REX DINO GAME 3D</h1>
+                    <p>Play popular google game but in 3d!</p>
+                    <a href="https://mrwaffl3.itch.io/t-rex" class="btn app-store">Itch.io</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="flappy logo.png" alt="Slide 2 Image">
+                <div class="text-container">
+                    <h1>Flappy Bird 3D</h1>
+                    <p>It's flappy bird BUT 3d</p>
+                    <a href="https://mrwaffl3.itch.io/flappy-bird-3d" class="btn app-store">Itch.io</a>
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+    
+            function changeSlide(direction) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + direction + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+        </script>
+
+
+
+        
+        <div class="intro-section">
+            <img src="logo.png" alt="Team Eclipse Logo" class="logo-large">
+            <div class="intro-box">
+                <h2>Welcome to Team Eclipse</h2>
+                <p>At Team Eclipse, we specialize in creating innovative and engaging games that captivate players across platforms. Our team of passionate developers, artists, and designers push the boundaries of storytelling and gameplay to deliver unforgettable experiences. Join us as we shape the future of interactive entertainment.</p> <br>
+                <a class="btn" href="index.html">Check out games!</a>
+            </div>
+
+        </div>
+
+
+    
+
+
+        <!-- Best Games Section -->
+        <div class="best-games">
+            <div class="game">
+                <img src="man-looking-attractive.png" alt="Game 1" class="game-image">
+                <h3>Game Title 1</h3>
+                <p>Description of the first game. Exciting gameplay, beautiful visuals, and a thrilling story await!</p>
+            </div>
+            <div class="game">
+                <img src="man-looking-attractive.png" alt="Game 2" class="game-image">
+                <h3>Game Title 2</h3>
+                <p>Description of the second game. An epic adventure through a magical world filled with challenges.</p>
+            </div>
+            <div class="game">
+                <img src="man-looking-attractive.png" alt="Game 3" class="game-image">
+                <h3>Game Title 3</h3>
+                <p>Description of the third game. A journey that will push your skills and imagination to the limit.</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+
+
+
+    <!-- Footer section -->
+<!-- Footer section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h1>Team Eclipse</h1>
+            <div class="social-media">
+                <a href="https://mrwaffl3.itch.io/" target="_blank"><img src="itch-io.1024x1024.png" alt="Twitter"></a>
+                <a href="https://www.youtube.com/@TheTeamEclipsee" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-column">
+                <h3>Games</h3>
+                <a href="https://mrwaffl3.itch.io/nothing">Nothing</a><br>
+                <a href="https://mrwaffl3.itch.io/shitty-rocket">Shitty Rocket</a> <br>
+                <a href="https://mrwaffl3.itch.io/flappy-bird-3d">Flappy Bird 3D</a><br>
+                <a href="https://mrwaffl3.itch.io/t-rex">T-Rex 3D</a>
+            </div>
+            <div class="footer-column">
+                <h3>Sites</h3>
+                <a href="index.html">Home</a><br>
+                <a href="#">Games</a><br>
+                <a href="#">About us</a><br>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy;2024-2024 Team Eclipse, but not LLC.</p>
+    </div>
+</footer>
+
+</body>
+</html>
